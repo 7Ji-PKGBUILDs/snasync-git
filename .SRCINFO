@@ -1,15 +1,16 @@
 pkgbase = snasync-git
 	pkgdesc = A simple and naive Bash script to sync Btrfs snapshots created by snapper from hot storage to cold and/or remote storage
-	pkgver = 0.1.0.r1.96bd498
+	pkgver = 0.1.0.r12.9277f0c
 	pkgrel = 1
 	url = https://github.com/7Ji/snasync
 	arch = any
 	license = AGPL-3.0-or-later
 	depends = btrfs-progs
 	optdepends = openssh: remote sync
-	provides = snasync=0.1.0.r1.96bd498
+	provides = snasync=0.1.0.r12.9277f0c
 	conflicts = snasync
 	source = git+https://github.com/7Ji/snasync.git
 	sha256sums = SKIP
 
 pkgname = snasync-git
+	backup = etc/conf.d/snasync

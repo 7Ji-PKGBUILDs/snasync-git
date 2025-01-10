@@ -3,7 +3,7 @@
 _pkgbase=snasync
 _srcname="${_pkgbase}"
 pkgname=${_pkgbase}-git
-pkgver=0.1.0.r1.96bd498
+pkgver=0.1.0.r12.9277f0c
 pkgrel=1
 pkgdesc="A simple and naive Bash script to sync Btrfs snapshots created by snapper from hot storage to cold and/or remote storage"
 arch=('any')
@@ -25,5 +25,7 @@ pkgver() {
 }
 
 package() {
-  install -Dm755 "${_srcname}/${_pkgbase}.sh" "${pkgdir}/usr/bin/${_pkgbase}"
+  backup=('etc/conf.d/snasync')
+  cd "${_srcname}"
+  make install DESTDIR="${pkgdir}" INTEGRATION=systemd
 }
