@@ -3,7 +3,7 @@
 _pkgbase=snasync
 _srcname="${_pkgbase}"
 pkgname=${_pkgbase}-git
-pkgver=0.1.0.r12.9277f0c
+pkgver=0.1.0.r16.c996e7f
 pkgrel=1
 pkgdesc="A simple and naive Bash script to sync Btrfs snapshots created by snapper from hot storage to cold and/or remote storage"
 arch=('any')
